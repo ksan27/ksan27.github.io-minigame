@@ -1,43 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Memory Game</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>神経衰弱</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
   <header>
     <div class="header-main">
       <a href="index.html">Sweet Games.</a>
     </div>
   </header>
   <main>
+  <div class="main">
     <p class="title">
       <ruby><rb>-- MINI GAME --</rb>
       <rp>（</rp><rt>ミニゲーム</rt><rp>）</rp></ruby>
     </p>
-    <div class="container">
-      <div id="stage">
-      </div>
-      <a href="" id="restart" class="inactive">RESTART</a>
-    </div>
-    <div class="side-icon">
-      <p>BACK</p>
-      <a href="index.html">
-        <img src="image/bear.png" alt="アイコン" class="bear">
-      </a>
-    </div>
-    <script src="memory.js"></script>
-    <div class="rule">
-      <ruby><rb>-- 神経衰弱 --</rb>
-        <rp>（</rp><rt>しんけいすいじゃく</rt><rp>）</rp></ruby>
-      <p>裏向きにならべたカードの中から、同じ数字のカードを２枚引き当てるゲームです</p>
+    <table id="field"></table>
+    <p id="view_tarn"></p>
+    <button type="button" id="ban_init" onclick="ban_init()" class="button">RESTART</button>
+  </div>
+  <div class="side-icon">
+    <p>BACK</p>
+    <a href="index.html">
+      <img src="image/bear.png" alt="アイコン" class="bear">
+    </a>
+  </div>
+    <script type="text/javascript" src="othello.js"></script>
+    <div class="rule1">
+      <p>-- オセロ --</p>
+      <p>2人用のゲームです。プレイヤーが交互に石を打ちながら、</p>
+      <p>相手の石を自分の石で挟むことによって自分の石へと換えていくボードゲームです</p>
       <p>-- ルール --</p>
-      <p>1.カードをめくる</p>
-      <p>2.2枚のカードがそろったらOK</p>
-      <p>3.全部カードがそろったらゲーム終了です</p>
+      <p>1.先手が黒、2番手が白です</p>
+      <p>2.自分が置けない場合をのぞいてパスはできません</p>
+      <p>3.ゲーム終了後、石の数を数えて多い方が勝利になります</p>
     </div>
   </main>
   <footer>
@@ -45,5 +46,5 @@
       <p>&copy;sweet games.</p>
     </div>
   </footer>
-</body>
+  </body>
 </html>
